@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  go:
+    image: golang:1.16-alpine
+    working_dir: /go/src/github.com/foolish15/shorten-url-service
+    volumes:
+      - ./:/go/src/github.com/foolish15/shorten-url-service
+    entrypoint: ["./air"]
